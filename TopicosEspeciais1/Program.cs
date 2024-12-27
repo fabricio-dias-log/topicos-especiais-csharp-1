@@ -86,5 +86,35 @@ class Program
         Console.WriteLine($"Replace('abc', 'xy'): -{s7}-");
         Console.WriteLine($"String.IsNullOrEmpty: -{b1}-");
         Console.WriteLine($"String.IsNullOrWhiteSpace: -{b2}-");
+        
+        // Date Time
+        
+        DateTime d1 = new DateTime(2024, 12, 27);
+        DateTime d2 = new DateTime(2024, 12, 27, 20,15, 02);
+        DateTime d3 = new DateTime(2024, 12, 27, 20,15, 02, 500);
+        
+        DateTime d4 = DateTime.Now;
+        DateTime d5 = DateTime.Today;
+        DateTime d6 = DateTime.UtcNow;
+        
+        DateTime d7 = DateTime.Parse("2024-12-27");
+        DateTime d8 = DateTime.Parse("2024-12-27 13:55:59");
+        DateTime d9 = DateTime.Parse("27/12/2024");
+        DateTime d10 = DateTime.Parse("27/12/2024 17:10:11");
+        DateTime d11 = DateTime.ParseExact("2000-08-15", "yyyy-MM-dd", CultureInfo.InvariantCulture);
+        DateTime d12 = DateTime.ParseExact("30/08/2000 18:30:55", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+
+        Console.WriteLine(d1);
+        Console.WriteLine(d2);
+        Console.WriteLine(d3);
+        Console.WriteLine(d4);
+        Console.WriteLine(d5);
+        Console.WriteLine(d6);
+        Console.WriteLine(d7);
+        Console.WriteLine(d8);
+        Console.WriteLine(d9);
+        Console.WriteLine(d10);
+        Console.WriteLine(d11);
+        Console.WriteLine(d12);
     }
 }
