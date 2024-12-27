@@ -1,4 +1,6 @@
-﻿namespace TopicosEspeciais1;
+﻿using System.Globalization;
+
+namespace TopicosEspeciais1;
 
 class Program
 {
@@ -46,5 +48,15 @@ class Program
                 break;
         }
         Console.WriteLine($"Dia: {day}");
+        
+        //expressão ternária
+        Console.WriteLine("Digite o preço do dia: ");
+        
+        double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        double desconto;
+        
+        desconto = (preco < 20.00) ? preco * 0.1 : preco * 0.05;
+
+        Console.WriteLine($"Desconto: {desconto.ToString("F2", CultureInfo.InvariantCulture)}");
     }
 }
