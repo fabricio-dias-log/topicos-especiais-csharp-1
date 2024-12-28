@@ -8,7 +8,7 @@ class Program
     {
         //inferencia: palavra var
 
-        /*var x = 10;
+        var x = 10;
         var y = 10.1;
         var z = "Maria";
 
@@ -115,7 +115,7 @@ class Program
         Console.WriteLine(d9);
         Console.WriteLine(d10);
         Console.WriteLine(d11);
-        Console.WriteLine(d12);*/
+        Console.WriteLine(d12);
         
         // Timespan
         TimeSpan diff = new TimeSpan();
@@ -141,5 +141,55 @@ class Program
         Console.WriteLine(diff8);
         Console.WriteLine(diff9);
         Console.WriteLine(diff10);
+        
+        // Propriedades com DateTime
+        
+        DateTime dateTime = new DateTime(2001, 8, 15, 13, 45,58, 275);
+        
+        Console.WriteLine(dateTime);
+        Console.WriteLine($"1 - Date: {dateTime.Date}");
+        Console.WriteLine($"2 - Day: {dateTime.Day}");
+        Console.WriteLine($"3 - DayOfWeek: {dateTime.DayOfWeek}");
+        Console.WriteLine($"4 - DayOfYear: {dateTime.DayOfYear}");
+        Console.WriteLine($"5 - Hour: {dateTime.Hour}");
+        Console.WriteLine($"6 - Kind: {dateTime.Kind}");
+        Console.WriteLine($"7 - Millisecond: {dateTime.Millisecond}");
+        Console.WriteLine($"8 - Minute: {dateTime.Minute}");
+        Console.WriteLine($"9 - Month: {dateTime.Month}");
+        Console.WriteLine($"10 - Second: {dateTime.Second}");
+        Console.WriteLine($"11 - Ticks: {dateTime.Ticks}");
+        Console.WriteLine($"12 - TimeOfDay: {dateTime.TimeOfDay}");
+        Console.WriteLine($"13 - Year: {dateTime.Year}");
+
+        string stringLongDateTime = dateTime.ToLongDateString();
+        string stringLongTime = dateTime.ToLongTimeString();
+        string stringShortDateTime = dateTime.ToShortDateString();
+        string stringShortTime = dateTime.ToShortTimeString();
+        string stringDateTime = dateTime.ToString();
+        string stringDateTimeFormated = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
+        string dateTimeFormated = dateTime.ToString("yyyy-MM-dd HH:mm:ss.fff");
+        
+        Console.WriteLine(stringLongDateTime);
+        Console.WriteLine(stringLongTime);
+        Console.WriteLine(stringShortDateTime);
+        Console.WriteLine(stringShortTime);
+        Console.WriteLine(stringDateTime);
+        Console.WriteLine(stringDateTimeFormated);
+        Console.WriteLine(dateTimeFormated);
+        
+        DateTime dateTime1 = new DateTime(2001, 8, 25, 17, 15,00, 500);
+        DateTime dateTime2 = dateTime.AddHours(2);
+        DateTime dateTime3 = dateTime.AddMinutes(3);
+        DateTime dateTime4 = dateTime.AddDays(7);
+        
+        TimeSpan difference = dateTime1.Subtract(dateTime);
+        
+        Console.WriteLine(difference);
+        
+        Console.WriteLine(dateTime);
+        Console.WriteLine(dateTime1);
+        Console.WriteLine(dateTime2);
+        Console.WriteLine(dateTime3);
+        Console.WriteLine(dateTime4);
     }
 }
