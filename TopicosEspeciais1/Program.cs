@@ -191,5 +191,41 @@ class Program
         Console.WriteLine(dateTime2);
         Console.WriteLine(dateTime3);
         Console.WriteLine(dateTime4);
+        
+        // Propriedades com TimeSpan
+        
+        TimeSpan t1 = TimeSpan.MaxValue;
+        TimeSpan t2 = TimeSpan.MinValue;
+        TimeSpan t3 = TimeSpan.Zero;
+        TimeSpan t4 = new TimeSpan(2, 3, 5, 7 ,11);
+        TimeSpan t5 = new TimeSpan(1, 30, 10);
+        TimeSpan t6 = new TimeSpan(0, 10, 5);
+
+        Console.WriteLine(t1);
+        Console.WriteLine(t2);
+        Console.WriteLine(t3);
+        
+        Console.WriteLine($"Days: {t4.Days}");
+        Console.WriteLine($"Hours: {t4.Hours}");
+        Console.WriteLine($"Minutes: {t4.Minutes}");
+        Console.WriteLine($"Seconds: {t4.Seconds}");
+        Console.WriteLine($"Milliseconds: {t4.Milliseconds}");
+        Console.WriteLine($"Ticks: {t4.Ticks}");
+        
+        Console.WriteLine($"TotalDays: {t4.TotalDays}");
+        Console.WriteLine($"TotalHours: {t4.TotalHours}");
+        Console.WriteLine($"TotalMinutes: {t4.TotalMinutes}");
+        Console.WriteLine($"TotalSeconds: {t4.TotalSeconds}");
+        Console.WriteLine($"TotalMilliseconds: {t4.TotalMilliseconds}");
+        
+        TimeSpan soma = t5.Add(t6);
+        TimeSpan sub = t5.Subtract(t6);
+        TimeSpan multi = t6.Multiply(2);
+        TimeSpan div = t6.Divide(2);
+
+        Console.WriteLine(soma);
+        Console.WriteLine(sub);
+        Console.WriteLine(multi);
+        Console.WriteLine(div);
     }
 }
