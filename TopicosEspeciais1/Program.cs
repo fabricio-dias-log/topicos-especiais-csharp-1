@@ -227,5 +227,48 @@ class Program
         Console.WriteLine(sub);
         Console.WriteLine(multi);
         Console.WriteLine(div);
+        
+        // DateTimeKind e padrão ISO-8601
+        // Sempre armazenar UTC, mas na hora de exibir, mostrar no Local
+        
+        DateTime dt = new DateTime(2000, 8, 15, 13, 5, 58, DateTimeKind.Local);
+        DateTime dt1 = new DateTime(2000, 8, 15, 13, 5, 58, DateTimeKind.Utc);
+        DateTime dt2 = new DateTime(2000, 8, 15, 13, 5, 58);
+
+        Console.WriteLine($"dt: {dt}");
+        Console.WriteLine($"dt Kind: {dt.Kind}");
+        Console.WriteLine($"dt To Local: {dt.ToLocalTime()}");
+        Console.WriteLine($"dt To Utc: {dt.ToUniversalTime()}");
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine($"dt1: {dt1}");
+        Console.WriteLine($"dt1 Kind: {dt1.Kind}");
+        Console.WriteLine($"dt1 To Local: {dt1.ToLocalTime()}");
+        Console.WriteLine($"dt1 To Utc: {dt1.ToUniversalTime()}"); 
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine($"dt2: {dt2}");
+        Console.WriteLine($"dt2 Kind: {dt2.Kind}");
+        Console.WriteLine($"dt2 To Local: {dt2.ToLocalTime()}");
+        Console.WriteLine($"dt2 To Utc: {dt2.ToUniversalTime()}");
+        
+        // ISO-8601
+        
+        DateTime dateT = DateTime.Parse("2000-08-15 13:05:58");
+        DateTime dateT1 = DateTime.Parse("2000-08-15T13:05:58Z");
+
+        Console.WriteLine(dateT);
+        Console.WriteLine(dateT1);
+        Console.WriteLine($"dateT: {dateT}");
+        Console.WriteLine($"dateT Kind: {dateT.Kind}");
+        Console.WriteLine($"dateT To Local: {dateT.ToLocalTime()}");
+        Console.WriteLine($"dateT To Utc: {dateT.ToUniversalTime()}");
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine($"dateT1: {dateT1}");
+        Console.WriteLine($"dateT1 Kind: {dateT1.Kind}");
+        Console.WriteLine($"dateT1 To Local: {dateT1.ToLocalTime()}");
+        Console.WriteLine($"dateT1 To Utc: {dateT1.ToUniversalTime()}"); 
+        Console.WriteLine("------------------------------------------");
+        Console.WriteLine(dateT1.ToString("yyyy-MM-ddTHH:mm:ssZ")); // necessário converter para UTC antes
+        Console.WriteLine(dateT1.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ"));
+    
     }
 }
