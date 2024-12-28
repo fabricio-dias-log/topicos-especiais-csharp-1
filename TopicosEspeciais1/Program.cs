@@ -8,7 +8,7 @@ class Program
     {
         //inferencia: palavra var
 
-        var x = 10;
+        /*var x = 10;
         var y = 10.1;
         var z = "Maria";
 
@@ -115,6 +115,31 @@ class Program
         Console.WriteLine(d9);
         Console.WriteLine(d10);
         Console.WriteLine(d11);
-        Console.WriteLine(d12);
+        Console.WriteLine(d12);*/
+        
+        // Timespan
+        TimeSpan diff = new TimeSpan();
+        TimeSpan diff1 = new TimeSpan(900000000L);
+        TimeSpan diff2 = new TimeSpan(2, 1, 30);
+        TimeSpan diff3 = new TimeSpan(1,4, 11, 30);
+        TimeSpan diff4 = new TimeSpan(1,4, 11, 30, 500);
+        TimeSpan diff5 = TimeSpan.FromDays(1.5);
+        TimeSpan diff6 = TimeSpan.FromHours(1.5);
+        TimeSpan diff7 = TimeSpan.FromMinutes(1.5);
+        TimeSpan diff8 = TimeSpan.FromSeconds(1.5);
+        TimeSpan diff9 = TimeSpan.FromMilliseconds(1.5);
+        TimeSpan diff10 = TimeSpan.FromTicks(900000000L);
+
+        Console.WriteLine(diff);
+        Console.WriteLine(diff1);
+        Console.WriteLine(diff2);
+        Console.WriteLine(diff3);
+        Console.WriteLine(diff4);
+        Console.WriteLine(diff5);
+        Console.WriteLine(diff6);
+        Console.WriteLine(diff7);
+        Console.WriteLine(diff8);
+        Console.WriteLine(diff9);
+        Console.WriteLine(diff10);
     }
 }
